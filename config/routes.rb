@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  #if we didnt use resources:users
-  get "/filip", to:"users#show", id:1
+  resources :rentals, except: [:show, :edit, :update]
 
   resources :users
   resources :books
