@@ -12,13 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.select("user_id", options_for_select(User.all.collect { |u| [u.username, u.id]})) %>
   </div>
 
   <div class="field">
-    <%= form.label :book_id %>
-    <%= form.text_field :book_id %>
+    <%= form.select("book_id", options_for_select(Book.all.collect { |b| [b.title, b.id]})) %>
   </div>
 
   <div class="actions">

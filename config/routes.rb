@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'static_pages#home'
   resources :rentals, except: [:show, :edit, :update]
 
   resources :users
